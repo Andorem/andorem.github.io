@@ -1,0 +1,42 @@
+name: PlayerNotify
+author: Nexamor
+main: io.github.andorem.playernotify.PlayerNotify
+version: 1.0
+description: Send and receive in-chat and sound notifications to other players.
+
+commands:
+   pn:
+      description: Send a ping notification sound to a player.
+      usage: /pn [username|help|mute]
+      aliases: [notifyplayer, playernotify]
+      permission: PlayerNotify.player.send
+      permission-message: You do not have permission to perform this command.
+
+permissions:
+   PlayerNotify.*:
+     description: Gives access to all PlayerNotify commands.
+     default: op
+     children: 
+       PlayerNotify.player.*: true
+       PlayerNotify.admin.*: true
+   PlayerNotify.player.*: 
+     description: Gives access to all standard player permissions.
+     children:
+       PlayerNotify.player.send: true
+       PlayerNotify.player.receive: true
+       PlayerNotify.player.mute: true
+   PlayerNotify.player.send:
+     description: Allows a player to send in-chat and sound notifications.
+     default: true
+   PlayerNotify.player.receive:
+     description: Allows a player to receive in-chat and sound notifications.
+   PlayerNotify.player.mute:
+     description: Allows a player to mute any incoming notification sounds.
+     default: true
+   PlayerNotify.admin.*:
+     description: Gives access to all admin permissions.
+     children:
+       PlayerNotify.admin.set: true
+   PlayerNotify.admin.set:
+     description: Allows you to set the notification sound for all players.
+     default: op
