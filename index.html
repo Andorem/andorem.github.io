@@ -27,21 +27,19 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-       <div class="projects">
-		<div data-repo="jquery-github/jquery-boilerplate/jquery-boilerplate" class="github-box-wrap"></div>
-	</div>
-
-	<p class="credits">Repository listings provided by <a href="http://zenorocha.com">Zeno Rocha</a>.</p>
-
-	<img id="github-logo" src="img/github-cat.png" alt="Github Cat"></img>
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="assets/base.css">
-	<script src="jquery.github.min.js"></script>
-
-	<script>
-		$("[data-repo]").github();
-	</script>
+       <h1>My Open Source Projects</h1>
+<div class="site"></div>
+<div id="opensource-projects"></div>
+ 
+<!-- Javascript to load and display repos from GitHub by Yonaba -->
+ <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+  <script src="/javascripts/git.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  $(function() {
+    $("#opensource-projects").loadRepositories(Andorem");
+  });
+  </script>
+<!-- End GitHub repo code -->
         </section>
     </div>
 
