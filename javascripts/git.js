@@ -9,7 +9,7 @@
     }
 
     jQuery.fn.loadRepositories = function(username, keyword) {
-      //this.html("<span>Querying GitHub for " + username +"'s repositories...</span>");
+      this.html("<span>Querying GitHub for " + username +"'s repositories...</span>");
      
       var target = this;
       $.githubUser(username, function(data) {
