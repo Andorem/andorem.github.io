@@ -33,15 +33,11 @@
         <div class="site"></div>
  <h2>Web Apps</h2>
 <div id="web-projects"></div>
-  <script type="text/javascript">
-    $(function() {
-      $("#web-projects").loadRepositories("Andorem", "Web");
-    });
-  </script>
  <h2>Bukkit Plugins</h2>
 <div id="bukkit-projects"></div>
   <script type="text/javascript">
     $(function() {
+      $("#web-projects").loadRepositories("Andorem", "Web");
       $("#bukkit-projects").loadRepositories("Andorem", "Bukkit");
     });
   </script>
